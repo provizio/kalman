@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.10.3)
 project(Kalman CXX)
 
 # TODO: Use VERSION argument to project command after raising the minimum
@@ -64,12 +64,12 @@ endif()
 set(TESTS
     # EKF
     test/ExtendedKalmanFilter.cpp
-    
+
     # UKF
     test/UnscentedKalmanFilterBase.cpp
     test/UnscentedKalmanFilter.cpp
     test/SquareRootUnscentedKalmanFilter.cpp
-    
+
     # Utils
     test/StandardBase.cpp
     test/SquareRootBase.cpp
