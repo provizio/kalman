@@ -1,4 +1,12 @@
 cmake_minimum_required(VERSION 3.10.3)
+set(CodingStandardsVersion 1.10.1)
+
+# Conan
+file(DOWNLOAD
+    "https://raw.githubusercontent.com/provizio/coding_standards/${CodingStandardsVersion}/cpp/cmake/Conan.cmake"
+    "${CMAKE_BINARY_DIR}/Conan.cmake" TLS_VERIFY ON)
+include(${CMAKE_BINARY_DIR}/Conan.cmake)
+
 project(Kalman CXX)
 
 # TODO: Use VERSION argument to project command after raising the minimum
